@@ -7,7 +7,7 @@
 
 | Файл | Назначение |
 | --- | --- |
-| `inda_notify_service.py` | Основной сервис (HTTP/HTTPS-сервер на стандартной библиотеке + `requests`) |
+| `notify_service.py` | Основной сервис (HTTP/HTTPS-сервер на стандартной библиотеке + `requests`) |
 | `config.yaml.example` | Шаблон конфигурации (ключи, каналы, прокси, сервер) |
 | `Dockerfile` | Сборка образа на `python:3.11-slim` |
 | `docker-compose.yml` | Запуск контейнера (порт `8448`, монтирование конфига, сертификатов и логов) |
@@ -81,7 +81,7 @@ curl -X POST http://localhost:8448/send \
 Перечитать конфиг без перезапуска сервера:
 
 ```bash
-python inda_notify_service.py --reload
+python notify_service.py --reload
 ```
 
 ## Логи

@@ -5,7 +5,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY inda_notify_service.py .
+COPY notify_service.py .
 COPY config.yaml config.yaml
 
 RUN addgroup --system --gid 1001 appuser && \
@@ -18,5 +18,5 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 
 EXPOSE 8448
 
-CMD ["python", "-u", "inda_notify_service.py"]
+CMD ["python", "-u", "notify_service.py"]
 

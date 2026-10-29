@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   inda-notify:
-    image: ctmon-notify
-    container_name: ctmon-notify
+    image: notify-service
+    container_name: notify-service
     restart: always
     ports:
       - 8448:8448

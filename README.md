@@ -86,7 +86,7 @@ python notify_service.py --reload
 
 ## Логи
 
-Логи пишутся в stdout контейнера (`docker logs ctmon-notify`). В compose также смонтирована директория `logs/` и включена ротация json-file.
+Логи пишутся в stdout контейнера (`docker logs notify-service`). В compose также смонтирована директория `logs/` и включена ротация json-file.
 
 ## Безопасность
 

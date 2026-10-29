@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SERVICE_PATH='/opt/notify-service'
-SERVICE_NAME='ctmon-notify'
+SERVICE_NAME='notify-service'
 
 sudo openssl req -x509 -newkey rsa:4096 \
 	-keyout "$SERVICE_PATH/certs/$SERVICE_NAME.key" \

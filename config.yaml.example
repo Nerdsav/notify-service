@@ -1,0 +1,43 @@
+# Скопируйте в config.yaml и заполните своими значениями.
+# config.yaml не коммитится (см. .gitignore).
+
+# API ключи для авторизации
+api_keys:
+  - key: "<API_KEY>"
+    description: "Описание ключа"
+
+# Каналы
+channels:
+  telegram_my_notify:
+    type: "telegram"
+    token: "<TELEGRAM_BOT_TOKEN>"
+    chat_ids:
+      - "<CHAT_ID>"
+    proxy:            # необязательный блок; удалите, если прокси не нужен
+      host: "<PROXY_HOST>"
+      port: 3129
+      type: "http"
+      user: "<PROXY_USER>"
+      password: "<PROXY_PASSWORD>"
+    description: "Telegram-канал"
+
+#  pachca_devops:
+#    type: "pachca"
+#    token: "<PACHCA_TOKEN>"
+#    entity_id: 0
+#    description: "Пачка channel Devops"
+
+# Таймаут в секундах
+timeout: 30
+
+# Настройки сервера
+server:
+  host: "0.0.0.0"
+  port: 8448
+  use_ssl: false
+  ssl_cert: "/app/certs/ctmon-notify.crt"
+  ssl_key: "/app/certs/ctmon-notify.key"
+
+# Настройки логирования
+logging:
+  level: "INFO"

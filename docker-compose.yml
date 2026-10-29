@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  inda-notify:
+    image: ctmon-notify
+    container_name: ctmon-notify
+    restart: always
+    ports:
+      - 8448:8448
+    volumes:
+      - /opt/notify-service/config.yaml:/app/config.yaml:ro
+      - /opt/notify-service/logs:/var/log
+      - /opt/notify-service/certs:/app/certs:ro
+    environment:
+      - TZ=Europe/Moscow
+      - CONFIG_PATH=/app/config.yaml
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    networks:
+      - notify-network
+
+networks:
+  notify-network:
+    external: true
+

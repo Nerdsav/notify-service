@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# Автор: A.Soroko, nerdsav@gmail.com, TG: @nerdsav
+# Лицензия: MIT (см. файл LICENSE)
 
 """
 Сервис-прокси для отправки уведомлений в различные мессенджеры и системы.

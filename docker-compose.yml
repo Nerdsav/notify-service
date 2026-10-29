@@ -5,6 +5,9 @@ services:
     image: notify-service
     container_name: notify-service
     restart: always
+    labels:
+      - "org.opencontainers.image.authors=A.Soroko <nerdsav@gmail.com>"
+      - "org.opencontainers.image.licenses=MIT"
     ports:
       - 8448:8448
     volumes:

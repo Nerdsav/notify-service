@@ -1,4 +1,6 @@
 #!/bin/bash
+# Автор: A.Soroko, nerdsav@gmail.com, TG: @nerdsav
+# Лицензия: MIT (см. файл LICENSE)
 
 SERVICE_PATH='/opt/notify-service'
 SERVICE_NAME='notify-service'
